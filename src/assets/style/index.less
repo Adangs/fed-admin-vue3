@@ -1,0 +1,47 @@
+@import "./mixin.less";
+@import "./reset.less";
+html, body, #app{ height: 100%;}
+
+// el
+.el-submenu{
+  .el-menu-item,
+  .el-submenu__title{
+    height: 40px; line-height: 40px;
+  }
+  &.is-active{
+    .el-submenu__title{ background: #ddd !important; color: #000 !important; font-weight: bold;}
+  }
+  .el-menu-item{
+    padding: 0 20px; min-width: auto;
+    &:hover{ background: #eee !important; }
+  }
+  .el-menu-item.is-active{  font-weight: bold; background: #eee !important;}
+}
+.el-table th{
+  background: #F8F8F8; color: #000;
+}
+.el-table__body tr.current-row > td{ background: #FDF6EC;}
+.el-textarea__inner{ padding-left: 5px;}
+
+
+
+.g-layout-all{
+  .flexVertical(); height: 100%;
+
+  .g-layout-content{
+    flex: 1; display: flex; overflow: hidden;
+    .g-layout-aside{
+      width: 160px; background: #fafafa; box-shadow: inset -1px 0 0 #e5e5e5;
+      .el-scrollbar{ height: 100%;}
+      .el-scrollbar__wrap{ overflow-x: hidden;}
+    }
+    .g-layout-main{ flex: 1; padding: 10px; overflow: auto;}
+  }
+}
+
+.m-views-form{ border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;}
+.m-views-content{}
+.m-dialog-form{
+  padding-right: 50px;
+  .el-cascader{ width: 100%;}
+}
