@@ -8,4 +8,11 @@ export default {
       params,
     });
   },
+  getList(params) {
+    return request({
+      url: '/app/mock/125191/api/alarm/page',
+      method: 'get',
+      params,
+    });
+  },
 };

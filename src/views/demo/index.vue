@@ -1,12 +1,6 @@
 <template>
   <div class="m-content-all">
     <dl>
-      <dt>filters</dt>
-      <dd>
-        {{ date }}
-      </dd>
-    </dl>
-    <dl>
       <dt>全局组件</dt>
       <dd>
         <x-empty />

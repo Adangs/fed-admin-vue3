@@ -1,12 +1,11 @@
 <template>
   <div class="m-book-list">
     <el-table :data="list">
-      <el-table-column prop="title" label="漫画标题" />
-      <el-table-column prop="ditchCode" label="所属渠道" />
-      <el-table-column prop="" label="所属策略" />
-      <el-table-column prop="status" label="漫画状态" />
-      <el-table-column prop="" label="特殊显示" />
-      <el-table-column prop="" label="操作" width="100" />
+      <el-table-column prop="coin" label="coin" />
+      <el-table-column prop="accName" label="accName" />
+      <el-table-column prop="hashrate" label="hashrate" />
+      <el-table-column prop="hashrateUnit" label="hashrateUnit" />
+      <el-table-column prop="addTime" label="addTime" />
     </el-table>
     <x-pagination v-model:immediate="pagination_immediate" :params="pagination" @paginated="setTableData" />
   </div>
@@ -21,7 +20,7 @@ export default {
     return {
       list: null,
       pagination: {
-        actions: 'book/getBookList',
+        actions: 'demo/getList',
       },
       pagination_immediate: true,
     };
@@ -33,7 +32,7 @@ export default {
   },
   methods: {
     setTableData(res) {
-      this.list = res.data || [];
+      this.list = res.body.list || [];
     },
   },
 };

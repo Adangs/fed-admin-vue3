@@ -8,7 +8,6 @@ export default [{
   name: 'demo',
   redirect: '/demo/index',
   component: Layout,
-  hidden: true,
   children: [{
     path: 'index',
     name: 'demo-index',
@@ -24,23 +23,23 @@ export default [{
     path: 'index',
     name: 'book-index',
     component: () => import('@/views/book/index'),
-    meta: { title: '漫画配置' },
+    meta: { title: '列表数据' },
   }],
 }, {
   path: '/strategy',
   name: 'strategy',
   redirect: '/strategy/index',
   component: Layout,
-  meta: { title: '策略配置' },
+  meta: { title: '一级菜单' },
   children: [{
     path: 'index',
     name: 'strategy-index',
     component: () => import('@/views/strategy/index'),
-    meta: { title: '策略列表' },
+    meta: { title: '二级菜单' },
   }, {
     path: 'book',
     name: 'strategy-book',
     component: () => import('@/views/strategy/book'),
-    meta: { title: '漫画列表' },
+    meta: { title: '二级菜单' },
   }],
 }];

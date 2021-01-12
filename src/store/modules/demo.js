@@ -8,5 +8,8 @@ export default {
     async getApi({ commit }, params) {
       return await api.getApi(params);
     },
+    async getList({ commit }, params) {
+      return await api.getList(params);
+    },
   },
 };
